@@ -1,0 +1,36 @@
+STANDALONE APP BUILD
+
+Goal
+- The people who use the app should not install Python.
+- They should only double-click the finished app.
+
+Windows EXE
+1. Use a Windows computer only for building.
+2. Install Python once on that build computer from:
+   https://www.python.org/downloads/windows/
+3. Tick "Add python.exe to PATH" during installation.
+4. Copy this whole folder to the Windows computer.
+5. Double-click build_windows.bat.
+6. Send users this file:
+   dist\PDF Number Editor.exe
+
+Users do not need Python, PyMuPDF, pip, or the source files.
+
+Why build on Windows?
+- Windows EXE files should be built on Windows.
+- A Mac build creates a Mac app, not a proper Windows EXE.
+
+User experience
+- Double-click PDF Number Editor.exe.
+- The app starts locally.
+- Their browser opens automatically.
+- They drag in PDFs and the mapping file.
+- PDFs stay on their computer.
+
+Possible warning
+- Windows SmartScreen may warn users because the EXE is not code-signed.
+- Code-signing is optional but makes distribution look more professional.
+
+IMPORTANT FIX NOTE
+- If you previously built an EXE that says "No module named cgi", rebuild it using this updated folder.
+- Do not reuse the old EXE from the old dist folder.

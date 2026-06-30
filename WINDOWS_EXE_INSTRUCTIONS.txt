@@ -1,0 +1,46 @@
+WINDOWS STANDALONE EXE INSTRUCTIONS
+
+This creates an app people can use without installing Python.
+
+BUILD THE EXE
+
+Use these steps on a Windows computer.
+
+1. Install Python from:
+   https://www.python.org/downloads/windows/
+
+   Important: tick "Add python.exe to PATH" during installation.
+
+2. Copy this whole folder to the Windows computer.
+
+3. Double-click:
+   build_windows.bat
+
+4. When it finishes, the standalone app is:
+   dist\PDF Number Editor.exe
+
+SEND TO USERS
+
+Send users only this file:
+
+dist\PDF Number Editor.exe
+
+They do not need Python, PyMuPDF, pip, or the source folder.
+
+HOW USERS RUN IT
+
+1. Double-click PDF Number Editor.exe.
+2. Their browser opens automatically.
+3. They drag in PDFs and the mapping file.
+4. They download the edited PDFs.
+
+NOTES
+
+- The app runs locally on their computer.
+- PDFs are not uploaded online.
+- Windows may show a SmartScreen warning because the EXE is not code-signed.
+- Build Windows EXEs on Windows. A Mac can build a Mac app, but not a proper Windows EXE.
+
+IMPORTANT FIX NOTE
+- If you previously built an EXE that says "No module named cgi", rebuild it using this updated folder.
+- Do not reuse the old EXE from the old dist folder.
